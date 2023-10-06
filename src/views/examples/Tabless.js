@@ -75,7 +75,7 @@ const Tabless = () => {
   };
 
   const filteredData = data.filter((item) =>
-    item.Tanggal.toString().includes(searchQuery)
+  item.tanggal.toString().includes(searchQuery)
   );
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -96,13 +96,19 @@ const Tabless = () => {
         <td>{item.HC}</td>
         <td>{item.WindSpeed}</td>
         <td>{item.WindDirection}</td>
-        <td>{item.Humidity}</td>
-        <td>{item.Temperature}</td>
-        <td>{item.Pressure}</td>
-        <td>{item.SolarRadiation}</td>
-        <td>{item["Rain Intensity"]}</td> 
-        <td>{item.Jam}</td>
-        <td>{item.Tanggal}</td>
+        <td>{item.stat_pm10}</td>
+        <td>{item.stat_pm25}</td>
+        <td>{item.stat_so2}</td>
+        <td>{item.stat_co}</td>
+        <td>{item.stat_no3}</td>
+        <td>{item.stat_hc}</td>
+        <td>{item.humidity}</td>
+        <td>{item.temperature}</td>
+        <td>{item.pressure}</td>
+        <td>{item.solarradiation}</td>
+        <td>{item.rain_intensity}</td> 
+        <td>{item.jam}</td>
+        <td>{item.tanggal}</td>
       </tr>
     );
   });
@@ -261,6 +267,13 @@ const Tabless = () => {
                     <th scope="col">HC</th>
                     <th scope="col">WindSpeed</th>
                     <th scope="col">WindDirection</th>
+                    <th scope="col">stat_pm10</th>
+                    <th scope="col">stat_pm25</th>
+                    <th scope="col">stat_so2</th>
+                    <th scope="col">stat_co</th>
+                    <th scope="col">stat_o3</th>
+                    <th scope="col">stat_no2</th>
+                    <th scope="col">stat_hc</th>
                     <th scope="col">Humidity</th>
                     <th scope="col">Temperature</th>
                     <th scope="col">Pressure</th>

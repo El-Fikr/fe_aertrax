@@ -52,6 +52,7 @@ var routes = [
     icon: "ni ni-planet text-blue",
     component: <Icons />,
     layout: "/admin",
+    hideInSidebar: true,
   },
   {
     path: "/maps",
